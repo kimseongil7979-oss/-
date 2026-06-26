@@ -2,6 +2,13 @@ import React, { useState } from "react";
 import { CaseStudy } from "../types";
 import { Search, MapPin, Calendar, Clock, CheckCircle, Flame, ArrowRight } from "lucide-react";
 
+import imgCloggedSludge from "../assets/images/clogged_drain_sludge_1782457299100.jpg";
+import imgCleanPipe from "../assets/images/clean_drain_pipe_1782457313302.jpg";
+import imgLeakDetection from "../assets/images/korean_leak_detection_1782457329415.jpg";
+import imgUnderSinkRepair from "../assets/images/korean_under_sink_repair_1782457343580.jpg";
+import imgHighPressureJet from "../assets/images/high_pressure_sewer_cleaning_1782451917818.jpg";
+import imgLeakTech from "../assets/images/korean_leak_tech_30s_1782452208498.jpg";
+
 export default function CaseStudies() {
   const [activeCategory, setActiveCategory] = useState<string>("전체");
   const [selectedCase, setSelectedCase] = useState<CaseStudy | null>(null);
@@ -21,8 +28,8 @@ export default function CaseStudies() {
       solution: "일반 스프링 관통기로는 관통 불가능하다고 진단. 엔진형 250bar 초고압 세척기 장비를 세팅하고, 특수 황동 역회전 회전 노즐을 진입시켜 단단한 고체 기름 덩어리를 잘게 부수고 씻어내는 세척 작업 수행. 동시에 하류 메인 집수조에서 쏟아지는 슬러지 찌꺼기를 안전히 회수한 뒤, HD 내시경을 재투입하여 새 배관처럼 완벽히 이물질이 제거된 백색 배관 내부 확인.",
       duration: "약 3시간 소요",
       guarantee: "공용 배관 무상 A/S 1년 보증",
-      beforeImg: "https://picsum.photos/seed/sewage_clog_before/800/600",
-      afterImg: "https://picsum.photos/seed/sewage_clean_after/800/600",
+      beforeImg: imgCloggedSludge,
+      afterImg: imgHighPressureJet,
       toolsUsed: ["엔진형 고압 세척기", "황동 고압 노즐", "배관 내시경 카메라"]
     },
     {
@@ -36,8 +43,8 @@ export default function CaseStudies() {
       solution: "석션기를 사용하여 입구 부근의 액상 이물질과 찌꺼기를 역흡입하여 회수한 후, 최신 플렉스 샤프트(밀링 장비)를 투입하여 배관 내부 벽면에 밀착된 딱딱한 슬러지를 갈아내어 완전히 스케일링 세척 처리. 작업 완료 후 싱크대에 물을 가득 담아 한 번에 내려보내는 담수 통수 테스트를 5회 이상 수행하여 역류 현상 완벽 종료 확인.",
       duration: "약 1시간 소요",
       guarantee: "동일 부위 무상 A/S 6개월 보증",
-      beforeImg: "https://picsum.photos/seed/sink_clog_before/800/600",
-      afterImg: "https://picsum.photos/seed/sink_clean_after/800/600",
+      beforeImg: imgCloggedSludge,
+      afterImg: imgUnderSinkRepair,
       toolsUsed: ["리지드 플렉스 샤프트 K9-102", "산업용 초강력 석션기", "배관 검사용 미니 카메라"]
     },
     {
@@ -51,8 +58,8 @@ export default function CaseStudies() {
       solution: "최첨단 청음 탐지기를 동원하여 미세 누수음의 중심지점을 밀리미터 단위로 확정. 다용도실 바닥 타일 1장 크기만 최소한으로 정밀 굴착하여 누수 중인 노후 XL 배관 교체 보수 작업 진행. 배관 교체 후 다시 기압을 걸어 추가 누수 없음을 최종 체크한 뒤, 타일 깔끔히 원상 복구 및 메지 미장 마감 처리.",
       duration: "약 4.5시간 소요",
       guarantee: "수리 배관 하자에 대해 2년 책임 보증",
-      beforeImg: "https://picsum.photos/seed/leak_locate_before/800/600",
-      afterImg: "https://picsum.photos/seed/leak_fix_after/800/600",
+      beforeImg: imgLeakDetection,
+      afterImg: imgLeakTech,
       toolsUsed: ["수소 가스식 탐색기", "고정밀 청음 누수탐지기", "타일 정밀 컷팅기"]
     },
     {
@@ -66,8 +73,8 @@ export default function CaseStudies() {
       solution: "외부 맨홀 역방향에서 대형 전동 스프링 청소기를 진입하여 걸려있는 물티슈 뭉치와 머리카락을 1차적으로 강제 인양하여 꺼냄. 이후 세대 내부에서 샤프트 스핀 장비로 배관 안쪽 마감을 스케일링 청소 완료. 2층, 3층 공용 전 세대 통수 테스트 결과 1층으로의 낙하 수압 역류나 오물 넘침 현상이 완벽히 구제 완료됨.",
       duration: "약 2.5시간 소요",
       guarantee: "동일 공용배관 물티슈 수거 관련 6개월 보증",
-      beforeImg: "https://picsum.photos/seed/toilet_clog_before/800/600",
-      afterImg: "https://picsum.photos/seed/toilet_clean_after/800/600",
+      beforeImg: imgCloggedSludge,
+      afterImg: imgCleanPipe,
       toolsUsed: ["1/2마력 전동 스프링 청소기", "물티슈 수거 특수 체인 헤드", "맨홀 내시경 검사선"]
     }
   ];
